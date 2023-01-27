@@ -4,7 +4,7 @@ const request = require('request')
 const https = require('https')
 const port = process.env.PORT
 const app = express()
-require('dotenv').config()
+require('dotenv').config({path: __dirname+'/.env'})
 app.use(bodyparser.urlencoded({extended: true}))
 app.use(express.static('public'))
 
